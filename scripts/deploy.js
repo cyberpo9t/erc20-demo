@@ -1,9 +1,9 @@
 const { ethers, run, network } = require("hardhat");
 
 async function main() {
-    const DemoTokenFactory = await ethers.getContractFactory("DemoToken");
+    const DemoTokenFactory = await ethers.getContractFactory("NewDemoToken");
     console.log("Deploying contract...");
-    const demoToken = await DemoTokenFactory.deploy();
+    const demoToken = await DemoTokenFactory.deploy(10000, 10, 1);
     await demoToken.deployed();
     console.log(`Deployed contract to: ${demoToken.address}`);
 }

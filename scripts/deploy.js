@@ -1,4 +1,4 @@
-const { ethers, run, network } = require("hardhat");
+const { ethers } = require("hardhat");
 
 async function main() {
     const DemoTokenFactory = await ethers.getContractFactory("NewDemoToken");
